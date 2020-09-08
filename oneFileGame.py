@@ -67,9 +67,12 @@ p2 = "O"
 currentPlayer = p1
 while not end:
     loc = int(input("location: "))
+    if board[loc] != None:
+        print("The cell already has a value. Try again")
+        continue
     board[loc] = currentPlayer
     printBoard(board)
-    if (None not in board or checkForWin(board, currentPlayer)):
+    if None not in board or checkForWin(board, currentPlayer):
         end = True
     currentPlayer = changePlayer(currentPlayer)
 
