@@ -14,11 +14,11 @@ def print_board(board):
             print(cell, end="\t")
     print("", end='\n')
 
-def check_for_win(board, symbol, current_player):
+def check_for_win(board, symbol):
     """checks if someone won"""
     for cell_arr in CELL_ARRAY_SETS:
         if get_cell_array(board, cell_arr) == [symbol]*3:
-            print(current_player + " wins")
+            print(symbol + " wins")
             return True
     return False
 

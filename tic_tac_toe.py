@@ -22,7 +22,7 @@ while not END:
         continue
     BOARD[LOC] = CURRENT_PLAYER
     board.print_board(BOARD)
-    if None not in BOARD or board.check_for_win(BOARD, CURRENT_PLAYER, CURRENT_PLAYER):
+    if None not in BOARD or board.check_for_win(BOARD, CURRENT_PLAYER):
         END = True
     CURRENT_PLAYER = player.change_player(CURRENT_PLAYER)
 
