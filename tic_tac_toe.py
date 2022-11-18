@@ -13,7 +13,10 @@ END = False
 CURRENT_PLAYER = PLAYER1
 
 while not END:
-    LOC = int(input("location: "))
+    LOC = int(input("location: "))-1
+    if not 0<=LOC<9:
+        print("Invalid value. Please enter value between 1-9")
+        continue
     if BOARD[LOC] is not None:
         print("The cell already has a value. Try again")
         continue
