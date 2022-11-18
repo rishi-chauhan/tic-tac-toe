@@ -27,4 +27,3 @@ while not END:
     CURRENT_PLAYER = player.change_player(CURRENT_PLAYER)
 
 print("Game ends", end='\n')
-board.print_board(BOARD)
