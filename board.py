@@ -18,9 +18,8 @@ def check_for_win(board, symbol):
     """checks if someone won"""
     for cell_arr in CELL_ARRAY_SETS:
         if get_cell_array(board, cell_arr) == [symbol]*3:
-            print(symbol + " wins")
-            return True
-    return False
+            return symbol
+    return None
 
 def get_cell_array(board, index_arr):
     """returns an array of cell value where cell indexed are mentioned in index_arr"""
